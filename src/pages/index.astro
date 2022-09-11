@@ -1,60 +1,94 @@
 ---
+import Icon from "astro-icon";
+
 import { SITE_TITLE } from "../config";
 import "../styles/global.css";
-
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{SITE_TITLE}</title>
-	</head>
-	<body>
-		<div class="text-center mb-3">
-			<h1 class="text-2xl font-bold mb-1">Max Mustermann</h1>
-			<h2 class="text-base">Musterstrasse 1, 12345 Musterstadt</h2>
-			<h3 class="text-base">+49 1234 567890 | <a href="#">max.mustermann@example.com</a></h3>
-		</div>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{SITE_TITLE}</title>
+  </head>
+  <body>
+    <div class="text-center mb-3">
+      <h1 class="text-2xl font-bold mb-1">Max Mustermann</h1>
+      <h2 class="text-base">Musterstrasse 1, 12345 Musterstadt</h2>
+      <h3 class="text-base">
+        +49 1234 567890 | <a href="#">max.mustermann@example.com</a>
+      </h3>
+    </div>
 
-		<div id="education" class="mb-2">
-			<h4 class="text-base font-bold uppercase mb-1">Education</h4>
-			<hr class="bg-black h-0.5" />
+    <div id="education" class="mb-2">
+      <h4 class="text-base font-bold uppercase mb-1">Education</h4>
+      <hr class="bg-black h-0.5" />
 
-			<div class="flex flex-row">
-				<div class="mr-2">
-					06/2012 - 01/2016
-				</div>
+      <div class="flex flex-row">
+        <div class="mr-2">06/2012 - 01/2016</div>
 
-				<div>
-					<div>
-						<span class="font-bold">Bachelor of Science, Informatics</span>
-						<span>Munich</span>
-					</div>
-					<div>Some special description about the bachelor</div>
-				</div>
-			</div>
-		</div>
+        <div>
+          <div>
+            <span class="font-bold">Bachelor of Science, Informatics</span>
+            <span>Munich</span>
+          </div>
+          <div>Some special description about the bachelor</div>
+        </div>
+      </div>
+    </div>
 
-		<div id="work" class="mb-2">
-			<h4 class="text-base font-bold uppercase mb-1">Work</h4>
-			<hr class="bg-black h-0.5" />
+    <div id="work" class="mb-2">
+      <h4 class="text-base font-bold uppercase mb-1">Work</h4>
+      <hr class="bg-black h-0.5" />
 
-			<div class="flex flex-row">
-				<div class="mr-2">
-					06/2012 - 01/2016
-				</div>
+      <div class="flex flex-row">
+        <div class="mr-2">06/2012 - 01/2016</div>
 
-				<div>
-					<div>
-						<span class="font-bold">Software developer</span>
-						<span>Munich</span>
-					</div>
-					<div>Some special description about the bachelor</div>
-				</div>
-			</div>
-		</div>
-	</body>
+        <div>
+          <div>
+            <span class="font-bold">Software developer</span>
+            <span>Munich</span>
+          </div>
+          <div>Some special description about the bachelor</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="social" class="justify-center flex flex-row mb-2">
+      <a
+        href="#"
+        class="ml-4 hover:text-red-500"
+        aria-label="github"
+        rel="noopener"
+      >
+        <Icon class="h-5" name="fa-brands:github" />
+      </a>
+      <a
+        href="#"
+        class="ml-4 hover:text-red-500"
+        aria-label="linkedin"
+        rel="noopener"
+      >
+        <Icon class="h-5" name="fa-brands:linkedin" />
+      </a>
+      <a
+        href="#"
+        class="ml-4 hover:text-red-500"
+        aria-label="stack-overflow"
+        rel="noopener"
+      >
+        <Icon class="h-5" name="fa-brands:stack-overflow" />
+      </a>
+      <a
+        href="#"
+        class="ml-4 hover:text-red-500"
+        aria-label="medium"
+        rel="noopener"
+      >
+        <Icon class="h-5" name="fa-brands:medium" />
+      </a>
+    </div>
+  </body>
 </html>
