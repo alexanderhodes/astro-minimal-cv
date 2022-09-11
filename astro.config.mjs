@@ -6,5 +6,10 @@ export default defineConfig({
     site: "http://localhost:3000",
     integrations: [
         tailwind(),
-    ]
+    ],
+    vite: {
+        ssr: {
+            external: ["svgo"],
+        },
+    },
 });
