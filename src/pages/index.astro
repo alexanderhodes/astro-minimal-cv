@@ -13,23 +13,27 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>{SITE_TITLE}</title>
   </head>
-  <body>
+  <body class="dark:bg-black">
+    <button id="dark-mode-toggle" class="mb-2 mt-2">
+      <Icon name="tabler:sun" class="w-6 h-6 dark:text-white" />
+    </button>
+
     <div class="text-center mb-3">
-      <h1 class="text-2xl font-bold mb-1">Max Mustermann</h1>
-      <h2 class="text-base">Musterstrasse 1, 12345 Musterstadt</h2>
-      <h3 class="text-base">
-        +49 1234 567890 | <a href="#">max.mustermann@example.com</a>
+      <h1 class="text-2xl font-bold mb-1 dark:text-white">Max Mustermann</h1>
+      <h2 class="text-base dark:text-white">Musterstrasse 1, 12345 Musterstadt</h2>
+      <h3 class="text-base dark:text-white">
+        +49 1234 567890 | <a href="#" class="dark:text-white">max.mustermann@example.com</a>
       </h3>
     </div>
 
     <div id="education" class="mb-2">
-      <h4 class="text-base font-bold uppercase mb-1">Education</h4>
+      <h4 class="text-base font-bold uppercase mb-1 dark:text-white">Education</h4>
       <hr class="bg-black h-0.5" />
 
       <div class="flex flex-row">
-        <div class="mr-2">06/2012 - 01/2016</div>
+        <div class="mr-2 dark:text-white">06/2012 - 01/2016</div>
 
-        <div>
+        <div class="dark:text-white">
           <div>
             <span class="font-bold">Bachelor of Science, Informatics</span>
             <span>Munich</span>
@@ -40,10 +44,10 @@ import "../styles/global.css";
     </div>
 
     <div id="work" class="mb-2">
-      <h4 class="text-base font-bold uppercase mb-1">Work</h4>
+      <h4 class="text-base font-bold uppercase mb-1 dark:text-white">Work</h4>
       <hr class="bg-black h-0.5" />
 
-      <div class="flex flex-row">
+      <div class="flex flex-row dark:text-white">
         <div class="mr-2">06/2012 - 01/2016</div>
 
         <div>
@@ -59,7 +63,7 @@ import "../styles/global.css";
     <div id="social" class="justify-center flex flex-row mb-2">
       <a
         href="#"
-        class="ml-4 hover:text-red-500"
+        class="ml-4 hover:text-red-500 dark:text-white"
         aria-label="github"
         rel="noopener"
       >
@@ -67,7 +71,7 @@ import "../styles/global.css";
       </a>
       <a
         href="#"
-        class="ml-4 hover:text-red-500"
+        class="ml-4 hover:text-red-500 dark:text-white"
         aria-label="linkedin"
         rel="noopener"
       >
@@ -75,7 +79,7 @@ import "../styles/global.css";
       </a>
       <a
         href="#"
-        class="ml-4 hover:text-red-500"
+        class="ml-4 hover:text-red-500 dark:text-white"
         aria-label="stack-overflow"
         rel="noopener"
       >
@@ -83,12 +87,40 @@ import "../styles/global.css";
       </a>
       <a
         href="#"
-        class="ml-4 hover:text-red-500"
+        class="ml-4 hover:text-red-500 dark:text-white"
         aria-label="medium"
         rel="noopener"
       >
         <Icon class="h-5" name="fa-brands:medium" />
       </a>
     </div>
+
+    <script is:inline>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+
+      window.onload = function () {
+        const element = document.getElementById("dark-mode-toggle");
+
+        if (element) {
+          element.addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark");
+
+            localStorage.theme = document.documentElement.classList.contains(
+              "dark"
+            )
+              ? "dark"
+              : "light";
+          });
+        }
+      };
+    </script>
   </body>
 </html>
