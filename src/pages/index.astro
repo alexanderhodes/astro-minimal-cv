@@ -1,5 +1,6 @@
 ---
 import Icon from "astro-icon";
+import SocialIcon from "../components/SocialIcon.astro";
 
 import { SITE_TITLE } from "../config";
 import "../styles/global.css";
@@ -20,14 +21,22 @@ import "../styles/global.css";
 
     <div class="text-center mb-3">
       <h1 class="text-2xl font-bold mb-1 dark:text-white">Max Mustermann</h1>
-      <h2 class="text-base dark:text-white">Musterstrasse 1, 12345 Musterstadt</h2>
+      <h2 class="text-base dark:text-white">
+        Musterstrasse 1, 12345 Musterstadt
+      </h2>
       <h3 class="text-base dark:text-white">
-        +49 1234 567890 | <a href="#" class="hover:text-red-500 dark:text-white dark:hover:text-red-500">max.mustermann@example.com</a>
+        +49 1234 567890 | <a
+          href="#"
+          class="hover:text-red-500 dark:text-white dark:hover:text-red-500"
+          >max.mustermann@example.com</a
+        >
       </h3>
     </div>
 
     <div id="education" class="mb-2">
-      <h4 class="text-base font-bold uppercase mb-1 dark:text-white">Education</h4>
+      <h4 class="text-base font-bold uppercase mb-1 dark:text-white">
+        Education
+      </h4>
       <hr class="bg-black h-0.5" />
 
       <div class="flex flex-row">
@@ -61,46 +70,25 @@ import "../styles/global.css";
     </div>
 
     <div id="social" class="justify-center flex flex-row mb-2">
-      <a
-        href="#"
-        class="ml-4 hover:text-red-500 dark:text-white dark:hover:text-red-500"
-        aria-label="github"
-        rel="noopener"
-      >
-        <Icon class="h-5" name="fa-brands:github" />
-      </a>
-      <a
-        href="#"
-        class="ml-4 hover:text-red-500 dark:text-white dark:hover:text-red-500"
-        aria-label="linkedin"
-        rel="noopener"
-      >
-        <Icon class="h-5" name="fa-brands:linkedin" />
-      </a>
-      <a
-        href="#"
-        class="ml-4 hover:text-red-500 dark:text-white dark:hover:text-red-500"
-        aria-label="stack-overflow"
-        rel="noopener"
-      >
-        <Icon class="h-5" name="fa-brands:stack-overflow" />
-      </a>
-      <a
-        href="#"
-        class="ml-4 hover:text-red-500 dark:text-white dark:hover:text-red-500"
-        aria-label="medium"
-        rel="noopener"
-      >
-        <Icon class="h-5" name="fa-brands:medium" />
-      </a>
-      <a
-        href="#"
-        class="ml-4 hover:text-red-500 dark:text-white dark:hover:text-red-500"
-        aria-label="website"
-        rel="noopener"
-      >
-        <Icon class="h-5" name="ant-design:global-outlined" />
-      </a>
+      <div class="mr-4">
+        <SocialIcon icon="fa-brands:github" label="github" url="#" />
+      </div>
+      <div class="mr-4">
+        <SocialIcon icon="fa-brands:linkedin" label="linkedin" url="#" />
+      </div>
+      <div class="mr-4">
+        <SocialIcon icon="fa-brands:medium" label="medium" url="#" />
+      </div>
+      <div class="mr-4">
+        <SocialIcon
+          icon="fa-brands:stack-overflow"
+          label="stack-overflow"
+          url="#"
+        />
+      </div>
+      <div>
+        <SocialIcon icon="ant-design:global-outlined" label="website" url="#" />
+      </div>
     </div>
 
     <script is:inline>
