@@ -1,5 +1,5 @@
 {
-  "name": "@example/minimal",
+  "name": "astro-minimal-cv",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,8 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^1.0.0",
-    "astro": "^1.2.1",
+    "@astrojs/tailwind": "^2.0.0",
+    "astro": "^1.2.4",
     "astro-icon": "^0.7.3"
   }
 }
