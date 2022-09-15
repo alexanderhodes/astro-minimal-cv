@@ -1,5 +1,7 @@
 ---
 import Icon from "astro-icon";
+import RowEntry from "../components/RowEntry.astro";
+import SectionTitle from "../components/SectionTitle.astro";
 import SocialIcon from "../components/SocialIcon.astro";
 
 import { SITE_TITLE } from "../config";
@@ -34,39 +36,65 @@ import "../styles/global.css";
     </div>
 
     <div id="education" class="mb-2">
-      <h4 class="text-base font-bold uppercase mb-1 dark:text-white">
-        Education
-      </h4>
-      <hr class="bg-black h-0.5" />
+      <SectionTitle title="Education" />
 
-      <div class="flex flex-row">
-        <div class="mr-2 dark:text-white">06/2012 - 01/2016</div>
-
-        <div class="dark:text-white">
-          <div>
-            <span class="font-bold">Bachelor of Science, Informatics</span>
-            <span>Munich</span>
-          </div>
-          <div>Some special description about the bachelor</div>
-        </div>
-      </div>
+      <RowEntry
+        description="some special description about the bachelor"
+        name="06/2012 - 01/2016"
+        title="Bachelor of science Informatics"
+        subTitle="Stuttgart"
+      />
     </div>
 
     <div id="work" class="mb-2">
-      <h4 class="text-base font-bold uppercase mb-1 dark:text-white">Work</h4>
-      <hr class="bg-black h-0.5" />
+      <SectionTitle title="Working experience" />
 
-      <div class="flex flex-row dark:text-white">
-        <div class="mr-2">06/2012 - 01/2016</div>
+      <RowEntry
+        description="some special description about the bachelor"
+        name="06/2012 - 01/2016"
+        title="Software Developer"
+        subTitle="Stuttgart"
+      />
 
-        <div>
-          <div>
-            <span class="font-bold">Software developer</span>
-            <span>Munich</span>
-          </div>
-          <div>Some special description about the bachelor</div>
-        </div>
-      </div>
+      <RowEntry
+        description="some special description about the bachelor"
+        name="06/2012 - 01/2016"
+        title="Software Developer"
+        subTitle="Munich"
+      />
+
+      <RowEntry
+        description="some special description about the bachelor"
+        name="06/2012 - 01/2016"
+        title="Software Developer"
+        subTitle="Cologne"
+      />
+    </div>
+
+    <div id="programming-experience" class="mb-2">
+      <SectionTitle title="Programming experience" />
+
+      <RowEntry
+        description="Describing an awesome coding project"
+        name="06/2012 - 01/2016"
+        title="Awesome coding project"
+      />
+    </div>
+
+    <div id="skills" class="mb-2">
+      <SectionTitle title="Skills and interests" />
+
+      <RowEntry description="German, English, French" name="Languages" />
+
+      <RowEntry
+        description="Technologies you're interested in..."
+        name="Technologies"
+      />
+
+      <RowEntry
+        description="Further interests beside tech stuff..."
+        name="Interests"
+      />
     </div>
 
     <div id="social" class="justify-center flex flex-row mb-2">

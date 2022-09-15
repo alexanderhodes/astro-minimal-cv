@@ -91,3 +91,7 @@ blockquote {
 body {
     margin: 0 auto !important;
 }
+
+.column {
+    width: 160px;
+}

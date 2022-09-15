@@ -1,0 +1,26 @@
+---
+export interface Props {
+  /** left column, normally displays time frame  */
+  name: string;
+  /** title will be displayed in bold */
+  title?: string;
+  /** description is a longer text displayed below title */
+  description: string;
+  /** sub title is placed on the right of title */
+  subTitle?: string;
+}
+
+const { description, name, title, subTitle } = Astro.props;
+---
+
+<div class="flex flex-row dark:text-white">
+  <div class="mr-2 column">{name}</div>
+
+  <div>
+    <div>
+      {title && <span class="font-bold">{title}</span>}
+      {subTitle && <span>{subTitle}</span>}
+    </div>
+    <div>{description}</div>
+  </div>
+</div>
