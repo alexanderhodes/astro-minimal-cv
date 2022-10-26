@@ -2,6 +2,9 @@
 
 Template for a minimal CV with dark mode support. This CV is fully customizable and uses [`Tailwind`](https://tailwindcss.com). Furthermore, you can add your own social accounts using `astro-icon`.
 
+<img src="./resources/light-mode-cv.png" height="500px" style="margin-right: 32px" />
+<img src="./resources/dark-mode-cv.png" height="500px" />
+
 ## Commands
 
 This application is built with `yarn`, but you're free to use any package management you want to.
