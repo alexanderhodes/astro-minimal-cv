@@ -27,61 +27,67 @@ import "../styles/global.css";
         Musterstrasse 1, 12345 Musterstadt
       </h2>
       <h3 class="text-base dark:text-white">
-        +49 1234 567890 | <a
-          href="#"
+        <a
+          href="tel:+49 1234 567890"
+          class="hover:text-red-500 dark:text-white dark:hover:text-red-500"
+          >+49 1234 567890
+        </a>
+        |
+        <a
+          href="mailto:max.mustermann@example.com"
           class="hover:text-red-500 dark:text-white dark:hover:text-red-500"
           >max.mustermann@example.com</a
         >
       </h3>
     </div>
 
-    <div id="education" class="mb-2">
+    <div id="education" class="mb-6">
       <SectionTitle title="Education" />
 
       <RowEntry
-        description="some special description about the bachelor"
-        name="06/2012 - 01/2016"
-        title="Bachelor of science Informatics"
+        description="My first steps in informatics earning a bachelor degree in informatics."
+        name="10/2016 - 10/2020"
+        title="Bachelor of Science Informatics"
         subTitle="Stuttgart"
       />
     </div>
 
-    <div id="work" class="mb-2">
+    <div id="work" class="mb-6">
       <SectionTitle title="Working experience" />
 
       <RowEntry
-        description="some special description about the bachelor"
-        name="06/2012 - 01/2016"
-        title="Software Developer"
-        subTitle="Stuttgart"
-      />
-
-      <RowEntry
-        description="some special description about the bachelor"
-        name="06/2012 - 01/2016"
-        title="Software Developer"
+        description="Started working as a fulltime frontend developer. After some time I got more and more into backend development as well by developing APIs with Node.js."
+        name="10/2020 - today"
+        title="Full stack developer"
         subTitle="Munich"
       />
 
       <RowEntry
-        description="some special description about the bachelor"
-        name="06/2012 - 01/2016"
-        title="Software Developer"
-        subTitle="Cologne"
+        description="I've extended my knowledge in frontend development by developing single page applications with React and Angular."
+        name="10/2019 - 10/2020"
+        title="Frontend developer (Working student)"
+        subTitle="Munich"
+      />
+
+      <RowEntry
+        description="Some first steps a frontend developer using some basic HTML, CSS and JavaScript. I've developed some smaller applications."
+        name="10/2017 - 01/2019"
+        title="Frontend developer (Working student)"
+        subTitle="Stuttgart"
       />
     </div>
 
-    <div id="programming-experience" class="mb-2">
+    <div id="programming-experience" class="mb-6">
       <SectionTitle title="Programming experience" />
 
       <RowEntry
-        description="Describing an awesome coding project"
-        name="06/2012 - 01/2016"
-        title="Awesome coding project"
+        description="Developed an app for ordering food with Angular."
+        name="07/2019 - 12/2019"
+        title="Food ordering app"
       />
     </div>
 
-    <div id="skills" class="mb-2">
+    <div id="skills" class="mb-6">
       <SectionTitle title="Skills and interests" />
 
       <RowEntry description="German, English, French" name="Languages" />
